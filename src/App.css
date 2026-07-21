@@ -121,6 +121,39 @@ button { font-family: inherit; }
 }
 
 /* ------------------------------------------------------------- primitives */
+
+/* Visible to screen readers, invisible on screen. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Placeholder while a route's chunk downloads. The height keeps the footer
+   from jumping up and back down as the page arrives. */
+.route-fallback {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+.route-fallback-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--line);
+  border-top-color: var(--accent);
+  animation: route-fallback-spin 0.7s linear infinite;
+}
+@keyframes route-fallback-spin {
+  to { transform: rotate(360deg); }
+}
+
 .container {
   width: 100%;
   max-width: var(--max);

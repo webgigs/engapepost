@@ -27,9 +27,9 @@ const siteConfig = {
   url: "https://engapepost.org",
 
   contact: {
-    email: "info@engapepost.org", // PLACEHOLDER
-    phone: "+254 700 000 000", // PLACEHOLDER
-    phoneHref: "+254700000000", // PLACEHOLDER
+    email: "engape2024@gmail.com",
+    phone: "+254 712 002180",
+    phoneHref: "+254712002180",
     addressLines: [
       "ENGAPE POST", // PLACEHOLDER
       "P.O. Box 0000 – 00100", // PLACEHOLDER

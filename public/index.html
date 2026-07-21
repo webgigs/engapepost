@@ -74,10 +74,12 @@
     />
 
     <!--
-      Structured data for search engines. Contact details are deliberately
-      absent: the ones in src/siteConfig.js are still placeholders, and
-      publishing an unverified email or phone number here would spread it into
-      Google's knowledge panel. Add email/telephone once they are confirmed.
+      Structured data for search engines. The telephone and email below are
+      confirmed; keep them in step with contact.phone / contact.email in
+      src/siteConfig.js, which does not feed this file. The postal address is
+      still absent on purpose — the lines in siteConfig.js are placeholders, and
+      publishing an unverified address here would spread it into Google's
+      knowledge panel. Add "address" once it is confirmed.
     -->
     <script type="application/ld+json">
       {
@@ -90,6 +92,8 @@
         "image": "https://engapepost.org/og-image.jpg",
         "slogan": "friends of community",
         "description": "ENGAPE POST is a community based organisation working alongside rural and pastoralist communities on education, gender based violence, the eradication of FGM, and environmental conservation.",
+        "telephone": "+254712002180",
+        "email": "engape2024@gmail.com",
         "areaServed": { "@type": "Country", "name": "Kenya" }
       }
     </script>
