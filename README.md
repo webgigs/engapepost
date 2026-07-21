@@ -80,17 +80,44 @@ component. In particular:
   empty state rather than invented dates. Add `{ title, date, location, text }` objects and
   the diary renders automatically.
 
+### The logo
+
+The mark is the client's artwork, kept at `photo-masters/brand/logo-source.jpg`. Every
+derivative is generated from that one file:
+
+```bash
+npm run brand     # regenerates the mark, all favicons, and the sharing card
+```
+
+The full seal carries the wordmark, four pillar badges and a curved tagline — none of which
+survives the 50px the header renders, and the header already sets the name and tagline as
+live text beside it. So `npm run brand` **re-composes** the emblem rather than shrinking the
+seal: it lifts out the illustration, seats it in a disc, and gives it back the seal's green
+ring. That is what `src/Images/logo-mark.png` is, and it is the only brand file the bundle
+imports — so it is also the only one git tracks. The complete seal is written to
+`photo-masters/brand/derived/logo-full.png` for print and partner use.
+
+There is no SVG favicon. The artwork is raster, and a hand-traced imitation would drift from
+the real mark; the `.ico` and PNGs cover every current browser. The previous, hand-drawn logo
+system is kept at `photo-masters/brand/legacy-v1/`.
+
 ### Brand colours
 
-Sampled from the organisation's logo and defined as CSS variables at the top of `App.css`:
+Defined as CSS variables at the top of `App.css`. **These predate the current logo and are
+kept deliberately** — the 2026 mark was fitted into the existing design rather than the design
+being repainted around it.
 
-| Token | Hex | From |
+| Token | Hex | Used for |
 |---|---|---|
-| `--crimson` | `#cb2952` | the banner background |
-| `--navy` | `#243656` | the wordmark |
-| `--sky` | `#1ba3e3` | the graduate |
-| `--green` | `#3e7f3a` | the acacia and the tagline |
-| `--gold` | `#c8801c` | the water carrier's jerrycans |
+| `--crimson` | `#cb2952` | primary accent — buttons, kickers, links |
+| `--navy` | `#243656` | headings, header utility strip, footer |
+| `--sky` | `#1ba3e3` | Education & Literacy accent |
+| `--green` | `#3e7f3a` | Environment accent; closest to the logo's ring |
+| `--gold` | `#c8801c` | Livelihoods accent |
+
+The logo's own colours — a `#2f5d2a` ring, a brown wordmark, and the food/water/education/
+dignity badge set — are not wired into the site. If the organisation ever wants the palette
+brought into line with the mark, that block in `App.css` is where to start.
 
 Each programme carries an accent (`accent-sky`, `accent-crimson`, `accent-rose`,
 `accent-green`, `accent-gold`) which re-points `--accent` for that page.

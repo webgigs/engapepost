@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiChevronDown, FiPhone } from "react-icons/fi";
 
-import logo from "../Images/logo-mark.svg";
+import logo from "../Images/logo-mark.png";
 import siteConfig from "../siteConfig";
 import { programmes } from "../Data";
 

@@ -1,11 +1,20 @@
 /* ============================================================================
    ENGAPE POST — friends of community
-   Palette sampled directly from the organisation's logo:
-     crimson  #CB2952  the banner
-     navy     #243656  the wordmark
-     sky      #1BA3E3  the graduate
-     green    #3E7F3A  the acacia and the tagline
-     gold     #D98A1F  the water carrier's jerrycans
+
+   Palette. These values were sampled from the previous logo and are kept
+   deliberately: the 2026 logo was fitted into this design rather than the
+   design being repainted around it.
+
+     crimson  #CB2952  primary accent — buttons, kickers, links
+     navy     #243656  headings, header utility strip, footer
+     sky      #1BA3E3  Education & Literacy accent
+     green    #3E7F3A  Environment accent. Closest to the new logo's ring.
+     gold     #D98A1F  Livelihoods accent
+
+   The current logo's own colours — a #2f5d2a ring, brown wordmark, and the
+   food/water/education/dignity badge set — are NOT wired in here. If the
+   organisation ever wants the site restyled to match the mark, this block and
+   the accents below are the place to start.
    ========================================================================== */
 
 :root {
@@ -1734,8 +1743,8 @@ section { padding: 5.5rem 0; }
 .footer-col a:hover { color: var(--white); text-decoration: none; }
 
 .footer-brand { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.3rem; }
-/* No background plate: the emblem carries its own navy field and crimson rim,
-   so a white square behind it would show as corners on the dark footer. */
+/* No background plate: the emblem is a disc with transparent corners, so it
+   sits on the dark footer as a badge without showing a square behind it. */
 .footer-mark { width: 54px; height: 54px; flex-shrink: 0; }
 .footer-brand strong { display: block; color: var(--white); font-size: 1.2rem; font-weight: 900; }
 .footer-brand small { display: block; color: #8fd6a0; font-size: 0.8rem; font-style: italic; }

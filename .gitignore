@@ -50,9 +50,13 @@ pnpm-debug.log*
 # all 16 MB straight back into every deploy.
 /photo-masters
 
-# src/Images now holds only the logo SVGs, which the header and footer import
-# directly. At 4 KB webpack inlines the mark into the bundle — sending it to a
-# CDN would cost a round trip and make it slower, not faster.
+# src/Images holds only what the bundle imports directly. Photographs are on
+# the CDN; anything that lands here by accident stays out of the repo.
 src/Images/*.jpg
 src/Images/*.jpeg
 src/Images/*.png
+
+# …except the logo mark, which the header and footer import. It MUST be
+# committed: photo-masters/ is gitignored, so on a clean CI checkout there is
+# nothing to regenerate it from and the build would fail on a missing import.
+!src/Images/logo-mark.png

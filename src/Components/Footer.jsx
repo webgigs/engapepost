@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
-import logo from "../Images/logo-mark.svg";
+import logo from "../Images/logo-mark.png";
 import siteConfig from "../siteConfig";
 import { programmes } from "../Data";
 

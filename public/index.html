@@ -21,9 +21,13 @@
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
+    <!--
+      No SVG favicon: the 2026 logo is raster artwork, and a traced imitation
+      would drift from the real mark. The .ico carries 16/32/48 and the PNG
+      covers everything else, which between them satisfy every current browser.
+    -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/favicon-96x96.png" />
-    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -58,7 +62,7 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Schoolchildren waving, beside the ENGAPE POST emblem and the words 'friends of community'."
+      content="The ENGAPE POST seal: a mother and two children beneath an acacia at sunrise, above the words ENGAPE POST and the pillars food, water, education and dignity."
     />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -70,16 +74,14 @@
     <meta name="twitter:image" content="https://engapepost.org/og-image.jpg" />
     <meta
       name="twitter:image:alt"
-      content="Schoolchildren waving, beside the ENGAPE POST emblem and the words 'friends of community'."
+      content="The ENGAPE POST seal: a mother and two children beneath an acacia at sunrise, above the words ENGAPE POST and the pillars food, water, education and dignity."
     />
 
     <!--
-      Structured data for search engines. The telephone and email below are
-      confirmed; keep them in step with contact.phone / contact.email in
-      src/siteConfig.js, which does not feed this file. The postal address is
-      still absent on purpose — the lines in siteConfig.js are placeholders, and
-      publishing an unverified address here would spread it into Google's
-      knowledge panel. Add "address" once it is confirmed.
+      Structured data for search engines. The contact details below are
+      confirmed. This file does NOT read src/siteConfig.js, so telephone, email
+      and address are duplicated here — change them in both places or Google
+      will keep serving the stale one.
     -->
     <script type="application/ld+json">
       {
@@ -94,6 +96,13 @@
         "description": "ENGAPE POST is a community based organisation working alongside rural and pastoralist communities on education, gender based violence, the eradication of FGM, and environmental conservation.",
         "telephone": "+254712002180",
         "email": "engape2024@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "postOfficeBoxNumber": "231",
+          "addressLocality": "Kiserian",
+          "addressRegion": "Kajiado County",
+          "addressCountry": "KE"
+        },
         "areaServed": { "@type": "Country", "name": "Kenya" }
       }
     </script>

@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "images:upload": "node scripts/cloudinary-upload.mjs",
-    "images:verify": "node scripts/cloudinary-verify.mjs"
+    "images:verify": "node scripts/cloudinary-verify.mjs",
+    "brand": "node scripts/brand-assets.mjs"
   },
   "eslintConfig": {
     "extends": [

@@ -31,9 +31,10 @@ const siteConfig = {
     phone: "+254 712 002180",
     phoneHref: "+254712002180",
     addressLines: [
-      "ENGAPE POST", // PLACEHOLDER
-      "P.O. Box 0000 – 00100", // PLACEHOLDER
-      "Kenya", // PLACEHOLDER
+      "ENGAPE POST",
+      "P.O. Box 231",
+      "Kiserian, Kajiado County",
+      "Kenya",
     ],
     officeHours: "Monday – Friday, 8.00am – 5.00pm",
     /**
