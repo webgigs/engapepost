@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#cb2952" />
+
+    <title>ENGAPE POST — friends of community</title>
+    <meta
+      name="description"
+      content="ENGAPE POST is a community based organisation working alongside rural and pastoralist communities on education, gender based violence, the eradication of FGM, and environmental conservation."
+    />
+
+    <link rel="canonical" href="https://engapepost.org/" />
+
+    <!--
+      The photographs are served from Cloudinary. Opening the connection now,
+      in parallel with the JS bundle, means the first image request does not
+      have to wait on a DNS lookup and a TLS handshake to a cold origin.
+    -->
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!--
+      Open Graph / social sharing.
+
+      WhatsApp, Facebook, LinkedIn and X fetch this page with a plain HTTP
+      scraper that does NOT run JavaScript, so these tags must be here in the
+      static HTML — anything React sets at runtime is invisible to them. That
+      also means every URL below has to be ABSOLUTE. A relative or
+      %PUBLIC_URL%-prefixed image is silently dropped by every one of them, and
+      the link renders as a bare grey URL.
+
+      Regenerate og-image.jpg with `node scripts/brand-assets.mjs`.
+      After deploying, re-scrape so the caches update:
+        Facebook / WhatsApp  https://developers.facebook.com/tools/debug/
+        LinkedIn             https://www.linkedin.com/post-inspector/
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ENGAPE POST" />
+    <meta property="og:url" content="https://engapepost.org/" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:title" content="ENGAPE POST — friends of community" />
+    <meta
+      property="og:description"
+      content="A community based organisation working alongside rural and pastoralist communities in Kenya on education, gender based violence, the eradication of FGM, and environmental conservation."
+    />
+    <meta property="og:image" content="https://engapepost.org/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://engapepost.org/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Schoolchildren waving, beside the ENGAPE POST emblem and the words 'friends of community'."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ENGAPE POST — friends of community" />
+    <meta
+      name="twitter:description"
+      content="A community based organisation working alongside rural and pastoralist communities in Kenya on education, gender based violence, the eradication of FGM, and environmental conservation."
+    />
+    <meta name="twitter:image" content="https://engapepost.org/og-image.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="Schoolchildren waving, beside the ENGAPE POST emblem and the words 'friends of community'."
+    />
+
+    <!--
+      Structured data for search engines. Contact details are deliberately
+      absent: the ones in src/siteConfig.js are still placeholders, and
+      publishing an unverified email or phone number here would spread it into
+      Google's knowledge panel. Add email/telephone once they are confirmed.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "ENGAPE POST",
+        "alternateName": "Engape Post Community Based Organisation",
+        "url": "https://engapepost.org/",
+        "logo": "https://engapepost.org/web-app-manifest-512x512.png",
+        "image": "https://engapepost.org/og-image.jpg",
+        "slogan": "friends of community",
+        "description": "ENGAPE POST is a community based organisation working alongside rural and pastoralist communities on education, gender based violence, the eradication of FGM, and environmental conservation.",
+        "areaServed": { "@type": "Country", "name": "Kenya" }
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!--
+      Static copy of the contact form.
+
+      Netlify's build bot scans the deployed HTML for forms; a form rendered by
+      React at runtime is invisible to it. This hidden copy registers the form so
+      that submissions from src/Pages/Contact.jsx are accepted. Keep the field
+      names here in sync with that component. Harmless on other hosts.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
