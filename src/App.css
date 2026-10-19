@@ -1229,6 +1229,7 @@ section { padding: 5.5rem 0; }
 .gallery-item:focus-visible .gallery-item-overlay { opacity: 1; }
 .gallery-item-overlay > svg { font-size: 1.2rem; }
 .gallery-item-caption { font-size: 0.85rem; line-height: 1.45; font-weight: 500; }
+.gallery-item-credit { display: block; margin-top: 0.2rem; font-size: 0.75rem; font-weight: 400; opacity: 0.8; }
 
 /* ================================================================ LIGHTBOX */
 .lightbox {
@@ -1288,6 +1289,7 @@ section { padding: 5.5rem 0; }
   font-size: 0.95rem;
 }
 .lightbox-figure figcaption small { color: rgba(255, 255, 255, 0.55); font-size: 0.85rem; }
+.lightbox-credit { display: block; margin-top: 0.2rem; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; }
 
 /* ================================================================= STORIES */
 .fieldnotes-section { background: var(--white); }

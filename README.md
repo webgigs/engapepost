@@ -43,7 +43,7 @@ npm test         # unit tests
 ```
 photo-masters/       ← the original photographs. GITIGNORED. Back this up.
   site/                page and programme photography
-  gallery/             the 54 gallery photographs
+  gallery/             the gallery photographs
 public/
   index.html         meta tags + the static Netlify form registration
   favicon.*          must be served from the site's own origin
@@ -76,6 +76,9 @@ component. In particular:
 - **Gallery** images come from Cloudinary. To add a photograph, drop it into
   `photo-masters/gallery/` as `<category>-<nn>.jpg`, add a caption to `galleryCaptions` in
   `Data.js`, then run `npm run images:upload`. No thumbnail needed — see *Photographs* below.
+  A new category also needs an entry in `galleryCategories`. If someone outside the
+  organisation took the photograph, add its ID to `galleryCredits` — the credit then shows
+  on the hover caption and in the lightbox.
 - **Events**: `upcomingEvents` is intentionally an empty array — the page shows a friendly
   empty state rather than invented dates. Add `{ title, date, location, text }` objects and
   the diary renders automatically.
@@ -174,6 +177,13 @@ npm run images:upload             # uploads anything new, rewrites the manifest
 npm run images:upload -- --force  # re-upload changed files and purge the CDN cache
 npm run images:verify             # check every image the site can request still serves
 ```
+
+**`photo-masters/` must hold every photograph, not just the new ones.** The upload script
+rebuilds `src/cloudinaryAssets.js` from whatever is in that folder, so running it from a fresh
+clone with only a new photo or two would drop everything else from the manifest. If the folder
+is missing, restore it from Cloudinary first (each original is public at its untransformed
+URL; see `cdnOriginal()` in `src/cdn.js`), then check `git diff src/cloudinaryAssets.js` shows
+only additions before committing.
 
 Credentials live in `.env.local` (gitignored) as `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`
 and `CLOUDINARY_API_SECRET`. They are needed **only** to upload — never to build or deploy, and

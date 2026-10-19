@@ -106,7 +106,12 @@ const Lightbox = ({ items = [], index, onClose, onNavigate }) => {
               sizes="(max-width: 900px) 95vw, 85vw"
             />
             <figcaption>
-              <span>{item.caption}</span>
+              <span>
+                {item.caption}
+                {item.credit && (
+                  <span className="lightbox-credit">Photo: {item.credit}</span>
+                )}
+              </span>
               <small>
                 {index + 1} of {items.length}
               </small>

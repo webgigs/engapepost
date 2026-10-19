@@ -15,7 +15,7 @@
 
 export const CLOUD_NAME = "dhew50ten";
 
-/** Uploaded 77 assets — 2026-07-21. */
+/** Uploaded 93 assets — 2026-10-19. */
 export const assets = {
   aboutApproach: { id: "engape/site/about-approach", v: 1784645805, w: 1200, h: 800, f: "jpg" },
   aboutStory: { id: "engape/site/about-story", v: 1784645805, w: 1200, h: 800, f: "jpg" },
@@ -68,6 +68,13 @@ export const assets = {
   "environment-08": { id: "engape/gallery/environment-08", v: 1784645814, w: 1000, h: 1500, f: "jpg" },
   "environment-09": { id: "engape/gallery/environment-09", v: 1784645814, w: 1113, h: 1500, f: "jpg" },
   "environment-10": { id: "engape/gallery/environment-10", v: 1784645814, w: 1113, h: 1500, f: "jpg" },
+  "environment-11": { id: "engape/gallery/environment-11", v: 1792403279, w: 1186, h: 1599, f: "jpg" },
+  "environment-12": { id: "engape/gallery/environment-12", v: 1792403287, w: 1186, h: 1599, f: "jpg" },
+  "environment-13": { id: "engape/gallery/environment-13", v: 1792403281, w: 1186, h: 1599, f: "jpg" },
+  "environment-14": { id: "engape/gallery/environment-14", v: 1792403283, w: 1599, h: 1186, f: "jpg" },
+  "environment-15": { id: "engape/gallery/environment-15", v: 1792403284, w: 1186, h: 1599, f: "jpg" },
+  "environment-16": { id: "engape/gallery/environment-16", v: 1792403287, w: 1186, h: 1599, f: "jpg" },
+  "environment-17": { id: "engape/gallery/environment-17", v: 1792403289, w: 1599, h: 1186, f: "jpg" },
   "health-01": { id: "engape/gallery/health-01", v: 1784645814, w: 1192, h: 798, f: "jpg" },
   "health-02": { id: "engape/gallery/health-02", v: 1784645814, w: 1192, h: 803, f: "jpg" },
   "health-03": { id: "engape/gallery/health-03", v: 1784645815, w: 1147, h: 780, f: "jpg" },
@@ -94,6 +101,15 @@ export const assets = {
   "schools-08": { id: "engape/gallery/schools-08", v: 1784645818, w: 1089, h: 753, f: "jpg" },
   "schools-09": { id: "engape/gallery/schools-09", v: 1784645818, w: 1172, h: 804, f: "jpg" },
   "schools-10": { id: "engape/gallery/schools-10", v: 1784645818, w: 1200, h: 815, f: "jpg" },
+  "sports-01": { id: "engape/gallery/sports-01", v: 1792403319, w: 4160, h: 3040, f: "jpg" },
+  "sports-02": { id: "engape/gallery/sports-02", v: 1792403312, w: 1023, h: 1280, f: "jpg" },
+  "sports-03": { id: "engape/gallery/sports-03", v: 1792403315, w: 816, h: 1202, f: "jpg" },
+  "sports-04": { id: "engape/gallery/sports-04", v: 1792403316, w: 1145, h: 735, f: "jpg" },
+  "sports-05": { id: "engape/gallery/sports-05", v: 1792403319, w: 1280, h: 869, f: "jpg" },
+  "sports-06": { id: "engape/gallery/sports-06", v: 1792403319, w: 1078, h: 1600, f: "jpg" },
+  "sports-07": { id: "engape/gallery/sports-07", v: 1792403326, w: 1232, h: 816, f: "jpg" },
+  "sports-08": { id: "engape/gallery/sports-08", v: 1792403331, w: 2480, h: 4160, f: "jpg" },
+  "sports-09": { id: "engape/gallery/sports-09", v: 1792403332, w: 1232, h: 816, f: "jpg" },
 };
 
 /** Gallery photograph IDs, in upload order. Data.js pairs these with captions. */
@@ -126,6 +142,13 @@ export const galleryIds = [
   "environment-08",
   "environment-09",
   "environment-10",
+  "environment-11",
+  "environment-12",
+  "environment-13",
+  "environment-14",
+  "environment-15",
+  "environment-16",
+  "environment-17",
   "health-01",
   "health-02",
   "health-03",
@@ -151,5 +174,14 @@ export const galleryIds = [
   "schools-07",
   "schools-08",
   "schools-09",
-  "schools-10"
+  "schools-10",
+  "sports-01",
+  "sports-02",
+  "sports-03",
+  "sports-04",
+  "sports-05",
+  "sports-06",
+  "sports-07",
+  "sports-08",
+  "sports-09"
 ];

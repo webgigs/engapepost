@@ -50,6 +50,11 @@ pnpm-debug.log*
 # all 16 MB straight back into every deploy.
 /photo-masters
 
+# photo/ is a drop folder for new photographs as they arrive (WhatsApp exports
+# and the like). They are renamed into photo-masters/gallery/ and uploaded from
+# there, so the raw copies never belong in git either.
+/photo
+
 # src/Images holds only what the bundle imports directly. Photographs are on
 # the CDN; anything that lands here by accident stays out of the repo.
 src/Images/*.jpg

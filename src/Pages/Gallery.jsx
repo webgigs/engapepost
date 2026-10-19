@@ -90,7 +90,12 @@ const Gallery = () => {
                   />
                   <span className="gallery-item-overlay">
                     <FiMaximize2 aria-hidden="true" />
-                    <span className="gallery-item-caption">{item.caption}</span>
+                    <span className="gallery-item-caption">
+                      {item.caption}
+                      {item.credit && (
+                        <span className="gallery-item-credit">Photo: {item.credit}</span>
+                      )}
+                    </span>
                   </span>
                 </motion.button>
               ))}

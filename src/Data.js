@@ -447,6 +447,7 @@ export const galleryCategories = [
   { id: "health", label: "Health & Dignity" },
   { id: "community", label: "Community" },
   { id: "milestones", label: "Milestones" },
+  { id: "sports", label: "Sports" },
 ];
 
 const galleryCaptions = {
@@ -495,6 +496,13 @@ const galleryCaptions = {
     "Standing among the maize at the demonstration farm",
     "Neat rows in the fenced kitchen garden",
     "Tending the vegetable beds",
+    "Pupils carry armfuls of dry maize stalks along the farm path",
+    "A pupil carries maize stalks with a cob still attached",
+    "A pupil smiles over a bundle of dry maize stalks",
+    "A papaya tree bearing young fruit beside the maize",
+    "Two men hold beetroot lifted from the kitchen garden",
+    "Tending the vegetable rows, seen through the garden fence",
+    "Rows of leafy greens beside the school block and water tank",
   ],
   health: [
     "Pupils receive dignity and hygiene packs",
@@ -516,6 +524,37 @@ const galleryCaptions = {
     "Tablets light up a darkened classroom",
     "Backpacks and supplies arrive at school",
   ],
+  sports: [
+    "A player in light blue strikes the ball as a teammate follows the play",
+    "A Corinthians F.C. player on the ball",
+    "The team captain stands with the champions' trophy",
+    "Corinthians F.C. line up for a team photograph in white",
+    "Corinthians F.C. line up for a team photograph in light blue",
+    "Close up of the champions' trophy, held by the captain",
+    "Players line up and applaud",
+    "The captain poses in the white Corinthians F.C. kit",
+    "The squad gathers for a group photograph",
+  ],
+};
+
+/**
+ * Photographs taken by someone outside the organisation, keyed by gallery ID.
+ * Anything not listed here is ENGAPE POST's own photography.
+ *
+ * The Terms page says photographs on the site belong to the organisation
+ * "unless stated otherwise" — this is where it is stated otherwise. A credit
+ * shows on the hover caption and in the lightbox as "Photo: <name>".
+ */
+export const galleryCredits = {
+  "sports-01": "EL JOSTO",
+  "sports-02": "Santa on it",
+  "sports-03": "Santa on it",
+  "sports-04": "Santa on it",
+  "sports-05": "Santa on it",
+  "sports-06": "Santa on it",
+  "sports-07": "Santa on it",
+  "sports-08": "Santa on it",
+  "sports-09": "Santa on it",
 };
 
 const pad = (n) => String(n).padStart(2, "0");
@@ -531,11 +570,10 @@ const pad = (n) => String(n).padStart(2, "0");
  */
 export const galleryItems = Object.entries(galleryCaptions)
   .flatMap(([category, captions]) =>
-    captions.map((caption, i) => ({
-      id: `${category}-${pad(i + 1)}`,
-      category,
-      caption,
-    }))
+    captions.map((caption, i) => {
+      const id = `${category}-${pad(i + 1)}`;
+      return { id, category, caption, credit: galleryCredits[id] };
+    })
   )
   .filter((item) => {
     if (assets[item.id]) return true;
